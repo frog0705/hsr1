@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>hsr1_navigation</name>
+  <version>1.0.0</version>
+  <description>
+    The hsr1_navigation provides roslaunch scripts for starting the navigation.
+  </description>
+  <license>BSD</license>
+  <author>Qinghua Ma</author>
+  <maintainer email="956473807@qq.com">Qinghua Ma</maintainer>
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>amcl</exec_depend>
+  <exec_depend>map_server</exec_depend>
+  <exec_depend>move_base</exec_depend>
+</package>

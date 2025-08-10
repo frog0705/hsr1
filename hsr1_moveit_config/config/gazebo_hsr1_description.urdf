@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="hsr1_description">
+    <link name="base_footprint" />
+    <joint name="base_footprint_joint" type="fixed">
+        <origin xyz="0 0 0.07" rpy="0 0 0" />
+        <parent link="base_footprint" />
+        <child link="base_link" />
+    </joint>
+    <link name="base_link">
+        <inertial>
+            <origin xyz="-2.77555756156289E-17 -5.55111512312578E-17 0.056835338512976" rpy="0 0 0" />
+            <mass value="4.80714032791377" />
+            <inertia ixx="0.0315403305634354" ixy="-4.69442092614301E-10" ixz="1.62478147637776E-18" iyy="0.0406916810158976" iyz="1.77867391243081E-18" izz="0.0365902052108465" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/base_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/base_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="front_left_wheel">
+        <inertial>
+            <origin xyz="-0.0763418944822859 0.128269969958949 0.143889225615351" rpy="0 0 0" />
+            <mass value="5.89180566156079" />
+            <inertia ixx="0.150804791351794" ixy="-0.0384666411475966" ixz="0.00969175864752925" iyy="0.0786720632513838" iyz="0.0157573818855328" izz="0.180861396100893" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/front_left_wheel.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/front_left_wheel.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="front_left_wheel_joint" type="continuous">
+        <origin xyz="0.0999999999999999 0.152710797871441 -0.0245" rpy="1.5707963267949 0 0" />
+        <parent link="base_link" />
+        <child link="front_left_wheel" />
+        <axis xyz="0 0 1" />
+    </joint>
+    <link name="front_right_wheel">
+        <inertial>
+            <origin xyz="0.0495086361339399 0.14081961864233 0.108146393398426" rpy="0 0 0" />
+            <mass value="5.89180566156079" />
+            <inertia ixx="0.133098775842571" ixy="0.0494303823415677" ixz="0.0126125790573082" iyy="0.0963780787606072" iyz="-0.01353322279029" izz="0.180861396100893" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/front_right_wheel.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/front_right_wheel.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="front_right_wheel_joint" type="continuous">
+        <origin xyz="0.1 -0.0993248211423353 -0.0244999999999999" rpy="1.5707963267949 0.198780218489868 -3.14159265358979" />
+        <parent link="base_link" />
+        <child link="front_right_wheel" />
+        <axis xyz="0 0 1" />
+    </joint>
+    <link name="rear_left_wheel">
+        <inertial>
+            <origin xyz="0.123658105517714 0.128269969958949 0.143889225615353" rpy="0 0 0" />
+            <mass value="5.89180566156079" />
+            <inertia ixx="0.150804791351794" ixy="-0.0384666411475966" ixz="0.00969175864752925" iyy="0.0786720632513838" iyz="0.0157573818855328" izz="0.180861396100893" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/rear_left_wheel.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/rear_left_wheel.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="rear_left_wheel_joint" type="continuous">
+        <origin xyz="-0.1 0.152710797871443 -0.0245" rpy="1.5707963267949 0 0" />
+        <parent link="base_link" />
+        <child link="rear_left_wheel" />
+        <axis xyz="0 0 1" />
+    </joint>
+    <link name="rear_right_wheel">
+        <inertial>
+            <origin xyz="-0.116599820212038 0.13471820285329 0.108146393398426" rpy="0 0 0" />
+            <mass value="5.89180566156079" />
+            <inertia ixx="0.154717935398889" ixy="0.0343817397651401" ixz="0.00883259692590424" iyy="0.0747589192042888" iyz="-0.0162545532424912" izz="0.180861396100893" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/rear_right_wheel.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/rear_right_wheel.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="rear_right_wheel_joint" type="continuous">
+        <origin xyz="-0.1 -0.0993248211423355 -0.0245" rpy="1.5707963267949 -0.0536647045298634 3.14159265358979" />
+        <parent link="base_link" />
+        <child link="rear_right_wheel" />
+        <axis xyz="0 0 1" />
+    </joint>
+    <link name="lift_link">
+        <inertial>
+            <origin xyz="-6.38378239159465E-16 0.12 -0.0469405574076666" rpy="0 0 0" />
+            <mass value="0.0959999999999999" />
+            <inertia ixx="0.000464" ixy="-1.45598033401142E-20" ixz="-1.58779739552214E-23" iyy="6.39999999999998E-06" iyz="5.01185043746506E-20" izz="0.000464" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/lift_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/lift_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="lift_joint" type="prismatic">
+        <origin xyz="0.0270000000000006 0.12 0.154287208125814" rpy="3.14159265358979 0 0" />
+        <parent link="base_link" />
+        <child link="lift_link" />
+        <axis xyz="0 0 -1" />
+        <limit lower="0" upper="0.6" effort="0" velocity="0" />
+    </joint>
+    <link name="left_arm_base">
+        <inertial>
+            <origin xyz="-8.54066416982185E-05 0.0715841884981663 0.0115769886650849" rpy="0 0 0" />
+            <mass value="0.140242935548136" />
+            <inertia ixx="9.65161924913219E-05" ixy="-6.86201774765616E-09" ixz="-4.87380639258575E-07" iyy="5.45414092945246E-05" iyz="1.41448489167764E-06" izz="8.35072089564167E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/left_arm_base.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.964705882352941 0.964705882352941 0.952941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/left_arm_base.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="left_arm_base_joint" type="fixed">
+        <origin xyz="-0.0040000003016688 0.0223499999999999 -0.00582771867673026" rpy="-1.5707963267949 0 -1.5707963267949" />
+        <parent link="lift_link" />
+        <child link="left_arm_base" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <link name="left_arm_shoulder">
+        <inertial>
+            <origin xyz="-0.0311428628881936 0.0943722843591647 -0.000118756610408152" rpy="0 0 0" />
+            <mass value="0.118342144673412" />
+            <inertia ixx="5.86116367758341E-05" ixy="4.52820436169518E-06" ixz="8.60811609895746E-08" iyy="3.27316890431936E-05" iyz="4.41365410166405E-07" izz="5.9991548930304E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/left_arm_shoulder.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.96078431372549 0.96078431372549 0.949019607843137 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/left_arm_shoulder.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="left_arm_shoulder_pan_joint" type="revolute">
+        <origin xyz="-9.94324697954074E-05 0.0183865872581351 0.0452" rpy="0 1.5707963267949 0" />
+        <parent link="left_arm_base" />
+        <child link="left_arm_shoulder" />
+        <axis xyz="0 -1 0" />
+        <limit effort="10" velocity="10" lower="-1.91986" upper="1.91986" />
+    </joint>
+    <link name="left_arm_upper">
+        <inertial>
+            <origin xyz="-0.072820375688613 0.00327436850237797 9.02917389869057E-05" rpy="0 0 0" />
+            <mass value="0.153633922340367" />
+            <inertia ixx="6.05952240374413E-05" ixy="-2.03948109372219E-06" ixz="1.3959090198661E-06" iyy="0.000189441561481002" iyz="-1.38475568180751E-07" izz="0.000151918054940066" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/left_arm_upper.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/left_arm_upper.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="left_arm_shoulder_lift_joint" type="revolute">
+        <origin xyz="-0.0305999999999993 0.137553970149532 0" rpy="3.14159265358979 0 -1.5707963267949" />
+        <parent link="left_arm_shoulder" />
+        <child link="left_arm_upper" />
+        <axis xyz="0 0 -1" />
+        <limit effort="10" velocity="10" lower="-1.74533" upper="1.74533" />
+    </joint>
+    <link name="left_arm_lower">
+        <inertial>
+            <origin xyz="-0.0775717508252431 -0.00151948353551978 0.000224904297332795" rpy="0 0 0" />
+            <mass value="0.143061616925613" />
+            <inertia ixx="4.97464782533773E-05" ixy="1.659850779996E-06" ixz="-8.74035972062829E-07" iyy="0.000134185687259806" iyz="6.17096511960786E-08" izz="0.000101486930989823" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/left_arm_lower.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/left_arm_lower.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="left_arm_elbow_flex" type="revolute">
+        <origin xyz="-0.112569978235762 0.028 0" rpy="0 0 -1.5707963267949" />
+        <parent link="left_arm_upper" />
+        <child link="left_arm_lower" />
+        <axis xyz="0 0 -1" />
+        <limit effort="10" velocity="10" lower="-1.69" upper="1.69" />
+    </joint>
+    <link name="left_arm_wrist">
+        <inertial>
+            <origin xyz="0.0074988521546846 -0.000183225910744489 -0.0352441141941843" rpy="0 0 0" />
+            <mass value="0.0685298669041996" />
+            <inertia ixx="1.92887930352228E-05" ixy="2.23104915146363E-08" ixz="1.82793956115037E-06" iyy="3.44200859821344E-05" iyz="-1.17241721405776E-07" izz="2.46010655928815E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/left_arm_wrist.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/left_arm_wrist.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="left_arm_wrist_flex_joint" type="revolute">
+        <origin xyz="-0.134899814673215 -0.0052000000000002 0" rpy="0 1.5707963267949 0" />
+        <parent link="left_arm_lower" />
+        <child link="left_arm_wrist" />
+        <axis xyz="1 0 0" />
+        <limit effort="10" velocity="10" lower="-1.65806" upper="1.65806" />
+    </joint>
+    <link name="left_arm_gripper">
+        <inertial>
+            <origin xyz="-0.00574918834621374 -0.000299389140201681 0.027671954785312" rpy="0 0 0" />
+            <mass value="0.0928490160187007" />
+            <inertia ixx="4.18673267658473E-05" ixy="5.4775731750841E-07" ixz="6.83698320543349E-06" iyy="4.93788979380327E-05" iyz="-1.11017245774733E-07" izz="2.99247079521115E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/left_arm_gripper.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/left_arm_gripper.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="left_arm_wrist_roll_joint" type="revolute">
+        <origin xyz="-9.99999999999474E-05 0 -0.0600979251128483" rpy="3.14159265358979 0 -1.5707963267949" />
+        <parent link="left_arm_wrist" />
+        <child link="left_arm_gripper" />
+        <axis xyz="0 0 1" />
+        <limit effort="10" velocity="10" lower="-2.74385" upper="2.84121" />
+    </joint>
+    <link name="left_arm_jaw">
+        <inertial>
+            <origin xyz="-0.00157480295581724 -0.0300227945242281 0.000375469899206643" rpy="0 0 0" />
+            <mass value="0.0206927796108342" />
+            <inertia ixx="1.14044815211905E-05" ixy="-5.51394017032959E-07" ixz="-1.0182657572208E-08" iyy="3.25976810899821E-06" iyz="-1.89598176821901E-07" izz="9.11629025269044E-06" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/left_arm_jaw.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.96078431372549 0.96078431372549 0.949019607843137 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/left_arm_jaw.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="left_arm_gripper_joint" type="revolute">
+        <origin xyz="0.0202000000000001 0 0.0244020721438898" rpy="-1.5707963267949 -0.19762080094728 0" />
+        <parent link="left_arm_gripper" />
+        <child link="left_arm_jaw" />
+        <axis xyz="0 0 1" />
+        <limit effort="10" velocity="10" lower="-0.174533" upper="1.74533" />
+    </joint>
+    <link name="left_arm_grasp_link" />
+    <joint name="left_arm_grasp_joint" type="fixed">
+        <origin xyz="0 0 0.07" rpy="0 0 0" />
+        <parent link="left_arm_gripper" />
+        <child link="left_arm_grasp_link" />
+    </joint>
+    <link name="right_arm_base">
+        <inertial>
+            <origin xyz="-4.2039885334022E-07 0.0715841885024884 0.0115769885943034" rpy="0 0 0" />
+            <mass value="0.140242935943357" />
+            <inertia ixx="9.65161926277387E-05" ixy="-6.86206769110721E-09" ixz="-4.87380557031348E-07" iyy="5.45414094586823E-05" iyz="1.41448495976878E-06" izz="8.35072090539803E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/right_arm_base.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.964705882352941 0.964705882352941 0.952941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/right_arm_base.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="right_arm_base_joint" type="fixed">
+        <origin xyz="-0.0040000003016688 0.21765 -0.00582771867673032" rpy="-1.5707963267949 0 -1.5707963267949" />
+        <parent link="lift_link" />
+        <child link="right_arm_base" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <link name="right_arm_shoulder">
+        <inertial>
+            <origin xyz="-0.0311428628881936 0.0943722843591647 -0.000118756610408152" rpy="0 0 0" />
+            <mass value="0.118342144673412" />
+            <inertia ixx="5.86116367758341E-05" ixy="4.52820436169518E-06" ixz="8.60811609895746E-08" iyy="3.27316890431936E-05" iyz="4.41365410166405E-07" izz="5.9991548930304E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/right_arm_shoulder.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.96078431372549 0.96078431372549 0.949019607843137 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/right_arm_shoulder.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="right_arm_shoulder_pan_joint" type="revolute">
+        <origin xyz="-9.94324697954074E-05 0.0183865872581351 0.0452" rpy="0 1.5707963267949 0" />
+        <parent link="right_arm_base" />
+        <child link="right_arm_shoulder" />
+        <axis xyz="0 -1 0" />
+        <limit effort="10" velocity="10" lower="-1.91986" upper="1.91986" />
+    </joint>
+    <link name="right_arm_upper">
+        <inertial>
+            <origin xyz="-0.072820375688613 0.00327436850237797 9.02917389869057E-05" rpy="0 0 0" />
+            <mass value="0.153633922340367" />
+            <inertia ixx="6.05952240374413E-05" ixy="-2.03948109372219E-06" ixz="1.3959090198661E-06" iyy="0.000189441561481002" iyz="-1.38475568180751E-07" izz="0.000151918054940066" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/right_arm_upper.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/right_arm_upper.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="right_arm_shoulder_lift_joint" type="revolute">
+        <origin xyz="-0.0305999999999993 0.137553970149532 0" rpy="3.14159265358979 0 -1.5707963267949" />
+        <parent link="right_arm_shoulder" />
+        <child link="right_arm_upper" />
+        <axis xyz="0 0 -1" />
+        <limit effort="10" velocity="10" lower="-1.74533" upper="1.74533" />
+    </joint>
+    <link name="right_arm_lower">
+        <inertial>
+            <origin xyz="-0.0775717508252431 -0.00151948353551978 0.000224904297332795" rpy="0 0 0" />
+            <mass value="0.143061616925613" />
+            <inertia ixx="4.97464782533773E-05" ixy="1.659850779996E-06" ixz="-8.74035972062829E-07" iyy="0.000134185687259806" iyz="6.17096511960786E-08" izz="0.000101486930989823" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/right_arm_lower.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/right_arm_lower.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="right_arm_elbow_flex" type="revolute">
+        <origin xyz="-0.112569978235762 0.028 0" rpy="0 0 -1.5707963267949" />
+        <parent link="right_arm_upper" />
+        <child link="right_arm_lower" />
+        <axis xyz="0 0 -1" />
+        <limit effort="10" velocity="10" lower="-1.69" upper="1.69" />
+    </joint>
+    <link name="right_arm_wrist">
+        <inertial>
+            <origin xyz="0.0074988521546846 -0.000183225910744489 -0.0352441141941843" rpy="0 0 0" />
+            <mass value="0.0685298669041996" />
+            <inertia ixx="1.92887930352228E-05" ixy="2.23104915146363E-08" ixz="1.82793956115037E-06" iyy="3.44200859821344E-05" iyz="-1.17241721405776E-07" izz="2.46010655928815E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/right_arm_wrist.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/right_arm_wrist.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="right_arm_wrist_flex_joint" type="revolute">
+        <origin xyz="-0.134899814673215 -0.0052000000000002 0" rpy="0 1.5707963267949 0" />
+        <parent link="right_arm_lower" />
+        <child link="right_arm_wrist" />
+        <axis xyz="1 0 0" />
+        <limit effort="10" velocity="10" lower="-1.65806" upper="1.65806" />
+    </joint>
+    <link name="right_arm_gripper">
+        <inertial>
+            <origin xyz="-0.00574918834621374 -0.000299389140201681 0.027671954785312" rpy="0 0 0" />
+            <mass value="0.0928490160187007" />
+            <inertia ixx="4.18673267658473E-05" ixy="5.4775731750841E-07" ixz="6.83698320543349E-06" iyy="4.93788979380327E-05" iyz="-1.11017245774733E-07" izz="2.99247079521115E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/right_arm_gripper.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/right_arm_gripper.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="right_arm_wrist_roll_joint" type="revolute">
+        <origin xyz="-9.99999999999474E-05 0 -0.0600979251128483" rpy="3.14159265358979 0 -1.5707963267949" />
+        <parent link="right_arm_wrist" />
+        <child link="right_arm_gripper" />
+        <axis xyz="0 0 1" />
+        <limit effort="10" velocity="10" lower="-2.74385" upper="2.84121" />
+    </joint>
+    <link name="right_arm_jaw">
+        <inertial>
+            <origin xyz="-0.00157480295581724 -0.0300227945242281 0.000375469899206643" rpy="0 0 0" />
+            <mass value="0.0206927796108342" />
+            <inertia ixx="1.14044815211905E-05" ixy="-5.51394017032959E-07" ixz="-1.0182657572208E-08" iyy="3.25976810899821E-06" iyz="-1.89598176821901E-07" izz="9.11629025269044E-06" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/right_arm_jaw.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.96078431372549 0.96078431372549 0.949019607843137 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/right_arm_jaw.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="right_arm_gripper_joint" type="revolute">
+        <origin xyz="0.0202000000000001 0 0.0244020721438898" rpy="-1.5707963267949 -0.19762080094728 0" />
+        <parent link="right_arm_gripper" />
+        <child link="right_arm_jaw" />
+        <axis xyz="0 0 1" />
+        <limit effort="10" velocity="10" lower="-0.174533" upper="1.74533" />
+    </joint>
+    <link name="right_arm_grasp_link" />
+    <joint name="right_arm_grasp_joint" type="fixed">
+        <origin xyz="0 0 0.07" rpy="0 0 0" />
+        <parent link="right_arm_gripper" />
+        <child link="right_arm_grasp_link" />
+    </joint>
+    <link name="laser">
+        <inertial>
+            <origin xyz="0 0.0156240942938574 2.77555756156289E-17" rpy="0 0 0" />
+            <mass value="0.0422588090333662" />
+            <inertia ixx="8.24028742113334E-06" ixy="-1.71120138479382E-22" ixz="-6.24424427249502E-22" iyy="8.88685502810459E-06" iyz="-2.40831518602032E-21" izz="8.24028742113333E-06" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="1.5708 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/laser.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/laser.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="laser_joint" type="fixed">
+        <origin xyz="0.07125 0 0.0705" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="laser" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <link name="camera_link">
+        <inertial>
+            <origin xyz="0.0299675474370011 -0.0527778406133297 -0.0267297616725352" rpy="0 0 0" />
+            <mass value="0.200307475787006" />
+            <inertia ixx="4.24154061321762E-05" ixy="-1.79883285126113E-08" ixz="-3.0906371541433E-08" iyy="0.00041894869760019" iyz="-4.02103556222728E-06" izz="0.00040851429467693" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/camera_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hsr1_description/meshes/camera_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="camera_joint" type="fixed">
+        <origin xyz="0.0451664150428182 0.0299578127465588 0.773753639372473" rpy="-1.5707963267949 0 -1.5707963267949" />
+        <parent link="base_link" />
+        <child link="camera_link" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <transmission name="trans_front_left_wheel_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="front_left_wheel_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="front_left_wheel_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_front_right_wheel_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="front_right_wheel_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="front_right_wheel_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_rear_left_wheel_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="rear_left_wheel_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="rear_left_wheel_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_rear_right_wheel_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="rear_right_wheel_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="rear_right_wheel_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_lift_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="lift_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="lift_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_left_arm_shoulder_pan_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="left_arm_shoulder_pan_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="left_arm_shoulder_pan_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_left_arm_shoulder_lift_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="left_arm_shoulder_lift_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="left_arm_shoulder_lift_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_left_arm_elbow_flex">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="left_arm_elbow_flex">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="left_arm_elbow_flex_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_left_arm_wrist_flex_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="left_arm_wrist_flex_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="left_arm_wrist_flex_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_left_arm_wrist_roll_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="left_arm_wrist_roll_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="left_arm_wrist_roll_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_left_arm_gripper_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="left_arm_gripper_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="left_arm_gripper_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_right_arm_shoulder_pan_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="right_arm_shoulder_pan_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="right_arm_shoulder_pan_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_right_arm_shoulder_lift_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="right_arm_shoulder_lift_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="right_arm_shoulder_lift_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_right_arm_elbow_flex">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="right_arm_elbow_flex">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="right_arm_elbow_flex_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_right_arm_wrist_flex_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="right_arm_wrist_flex_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="right_arm_wrist_flex_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_right_arm_wrist_roll_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="right_arm_wrist_roll_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="right_arm_wrist_roll_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_right_arm_gripper_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="right_arm_gripper_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="right_arm_gripper_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+</robot>
+

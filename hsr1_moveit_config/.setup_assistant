@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: hsr1_description
+    relative_path: urdf/hsr1_description.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/hsr1_description.srdf
+  CONFIG:
+    author_name: Qinghua Ma
+    author_email: 956473807@qq.com
+    generated_timestamp: 1754376369

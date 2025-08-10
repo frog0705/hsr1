@@ -1,0 +1,31 @@
+controller_list:
+  - name: fake_left_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - left_arm_shoulder_pan_joint
+      - left_arm_shoulder_lift_joint
+      - left_arm_elbow_flex
+      - left_arm_wrist_flex_joint
+      - left_arm_wrist_roll_joint
+  - name: fake_right_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - right_arm_shoulder_pan_joint
+      - right_arm_shoulder_lift_joint
+      - right_arm_elbow_flex
+      - right_arm_wrist_flex_joint
+      - right_arm_wrist_roll_joint
+  - name: fake_both_arms_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - left_arm_shoulder_pan_joint
+      - left_arm_shoulder_lift_joint
+      - left_arm_elbow_flex
+      - left_arm_wrist_flex_joint
+      - left_arm_wrist_roll_joint
+      - right_arm_shoulder_pan_joint
+      - right_arm_shoulder_lift_joint
+      - right_arm_elbow_flex
+      - right_arm_wrist_flex_joint
+      - right_arm_wrist_roll_joint
+
